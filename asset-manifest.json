@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ss-english-sandbox/static/css/main.66dcb729.css",
+    "main.js": "/ss-english-sandbox/static/js/main.dbae7cc0.js",
+    "index.html": "/ss-english-sandbox/index.html",
+    "main.66dcb729.css.map": "/ss-english-sandbox/static/css/main.66dcb729.css.map",
+    "main.dbae7cc0.js.map": "/ss-english-sandbox/static/js/main.dbae7cc0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.66dcb729.css",
+    "static/js/main.dbae7cc0.js"
+  ]
+}
