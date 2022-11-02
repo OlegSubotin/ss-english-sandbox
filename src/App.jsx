@@ -1,6 +1,7 @@
 import Section from "components/Section";
 import AppContainer from "components/AppContainer";
 import Select from 'components/Select';
+import CorrectOrder from 'components/CorrectOrder';
 
 let taskSelect = {
   taskName: "Choose the correct form to complete the following sentences.",
@@ -41,10 +42,38 @@ let taskSelect = {
     }
   ]
 };
+let taskCorrectOrder = {
+  taskName: "Put the phrases in the correct order",
+  questions: [
+    {
+      id: 1,
+      pieces: [
+        { id: 1, text: 'How much' },
+        { id: 2, text: 'are' },
+        { id: 3, text: 'these' },
+        { id: 4, text: 'trainers?' },
+      ],
+      correct: "How much are these trainers?"
+    },
+    {
+      id:2,
+      pieces: [
+        { id: 1, text: 'What' },
+        { id: 2, text: 'is' },
+        { id: 3, text: 'your' },
+        { id: 4, text: 'name?' },
+      ],
+      correct: "What is your name?"
+    }
+  ]
+};
 
 export const App = () => {
   return (
     <AppContainer>
+      <Section>
+        <CorrectOrder task={taskCorrectOrder} />
+      </Section>
       <Section>
         <Select task={taskSelect} />
       </Section>
