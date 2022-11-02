@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskName from 'components/TaskName';
 import CorrectOrderItem from './CorrectOrderItem';
-import s from './CorrectOrder.module.css';
+// import s from './CorrectOrder.module.css';
 
 const CorrectOrder = ({ task }) => {
   return (
