@@ -5,7 +5,7 @@ const TaskName = ({ children }) => {
 
   return (
     <p className={s.text}>
-      {children}
+      Task: &nbsp;{children}
     </p>
   )
 }
