@@ -1,7 +1,7 @@
 import React from 'react';
-import s from './Text.module.css';
+import s from './TaskName.module.css';
 
-const Text = ({ children }) => {
+const TaskName = ({ children }) => {
 
   return (
     <p className={s.text}>
@@ -10,4 +10,4 @@ const Text = ({ children }) => {
   )
 }
 
-export default Text
+export default TaskName

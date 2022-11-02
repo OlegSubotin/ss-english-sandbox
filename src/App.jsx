@@ -22,10 +22,22 @@ let taskSelect = {
       part2: "it to him.",
       answers: [
         { id: 0, answer: '' },
-        { answer: 'showed' },
-        { answer: '\'d shown' },
+        { id: 1, answer: 'showed' },
+        { id: 2, answer: '\'d shown' },
       ],
       correct: 'showed',
+    },
+    {
+      id: 3,
+      part1: "saddsadasdsdsaddsadasd, I wrote a letter. Second, I showed him the letter. ⇒ I wrote a letter and a few days later I",
+      part2: "it to him.",
+      answers: [
+        { id: 0, answer: '' },
+        { id: 1, answer: 'q' },
+        { id: 2, answer: 'w' },
+        { id: 3, answer: 'e' },
+      ],
+      correct: 'e',
     }
   ]
 };
