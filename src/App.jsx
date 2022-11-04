@@ -2,6 +2,7 @@ import Section from "components/Section";
 import AppContainer from "components/AppContainer";
 import Select from 'components/Select';
 import CorrectOrder from 'components/CorrectOrder';
+import MultipleChoiceGap from 'components/MultipleChoiceGap';
 
 let taskSelect = {
   taskName: "Choose the correct form to complete the following sentences.",
@@ -79,10 +80,49 @@ let taskCorrectOrder = {
     }
   ]
 };
+let taskMultipleChoiceGap = {
+  taskName: "Fulfill the gaps with the correct phrase",
+  variants: [
+    {id:1, text:"size 11 color black"},
+    {id:2, text:"How much are they"},
+    {id:3, text:"no thanks"},
+    {id:4, text:"Have you got"},
+  ],
+  questions: [
+    {
+      id: 1,
+      part1: " I need trainers",
+      part2: ", do you have it",
+      correct: "size 11 color black"
+    },
+    {
+      id: 2,
+      part1: "We have color white. I will bring. Ok? ",
+      part2: "I hate wite color",
+      correct: "no thanks"
+    },
+    {
+      id: 3,
+      part1: "Wht about this pair",
+      part2: "11$",
+      correct: "How much are they"
+    },
+    {
+      id: 4,
+      part1: "",
+      part2: "no we don't have it",
+      correct: "Have you got"
+    },
+    
+  ]
+};
 
 export const App = () => {
   return (
     <AppContainer>
+      <Section>
+        <MultipleChoiceGap task={taskMultipleChoiceGap} />
+      </Section>
       <Section>
         <CorrectOrder task={taskCorrectOrder} />
       </Section>

@@ -1,0 +1,41 @@
+.list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5px;
+  align-items: center;
+}
+
+.text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(28 / 20);
+  letter-spacing: 0.03em;
+  color: #1f2428;
+  margin: 0;
+}
+
+.button {
+  background-color: transparent;
+  min-width: 100px;
+  min-height: 40px;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(30 / 30);
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  cursor: pointer;
+  border: 1px solid #886478;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  padding: 5px 15px;
+  display: inline;
+}
