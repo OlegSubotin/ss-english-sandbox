@@ -63,6 +63,18 @@ let taskCorrectOrder = {
         { id: 3, text: 'your' },
         { id: 4, text: 'name?' },
       ],
+      correct: "What is yourrtryrjuymuk name?"
+    },
+    {
+      id:3,
+      pieces: [
+        { id: 1, text: 'What' },
+        { id: 2, text: 'is' },
+        { id: 3, text: 'your' },
+        { id: 4, text: 'qwe?' },
+        { id: 5, text: 'asd?' },
+        { id: 6, text: 'zxc?' },
+      ],
       correct: "What is your name?"
     }
   ]
