@@ -20,7 +20,8 @@ const CorrectOrderItem = ({ pieces, correct }) => {
   }
 
   const onVisibleBtnClick = e => {
-    setVisibleBtnContent(e.target.innerHTML)
+    setVisibleBtnContent(e.target.innerHTML);
+    e.target.className = s.clicked;
   };
 
   const onHiddenBtnClick = e => {

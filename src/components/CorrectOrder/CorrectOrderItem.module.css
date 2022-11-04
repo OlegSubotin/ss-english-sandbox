@@ -53,6 +53,23 @@
   padding: 5px 15px;
 }
 
+.clicked {
+  background-color: #efeefe;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(30 / 20);
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #1f2428;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+  padding: 5px 15px;
+}
+
 .green {
   background-color: #8bc34a;
   font-family: inherit;
