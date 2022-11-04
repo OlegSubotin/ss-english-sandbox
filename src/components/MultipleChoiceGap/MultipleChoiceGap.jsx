@@ -4,7 +4,7 @@ import Variants from './Variants';
 import TextPart from './TextPart';
 import s from './MultipleChoiceGap.module.css'
 
-const CorrectOrder = ({ task }) => {
+const MultipleChoiceGap = ({ task }) => {
   const [userVariant, setUserVariant] = useState();
   const onVariantClick = e => {
     setUserVariant(e.target.innerHTML.trim())
@@ -32,4 +32,4 @@ const CorrectOrder = ({ task }) => {
   )
 };
 
-export default CorrectOrder
+export default MultipleChoiceGap
