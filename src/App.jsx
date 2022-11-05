@@ -1,6 +1,7 @@
 import Section from "components/Section";
 import AppContainer from "components/AppContainer";
 import Select from 'components/Select';
+import Radio from 'components/Radio';
 import Input from 'components/Input';
 import CorrectOrder from 'components/CorrectOrder';
 import MultipleChoiceGap from 'components/MultipleChoiceGap';
@@ -39,6 +40,51 @@ const taskSelect = {
         { id: 1, answer: 'q' },
         { id: 2, answer: 'w' },
         { id: 3, answer: 'e' },
+      ],
+      correct: 'e',
+    }
+  ]
+};
+
+const taskRadio = {
+  taskName: "Choose the correct option to complete the following sentences.",
+  questions: [
+    {
+      id: 4324321,
+      question: "First, I wrote a letter. Second, I showed him the letter. ⇒ I showed him a letter that I",
+      answers: [
+        { id: 154, answer: 'wrote' },
+        { id: 2432, answer: '\'d written' },
+      ],
+      correct: '\'d written',
+    },
+    {
+      id: 33332,
+      question: "First, I wrote a letter. Second, I showed him the letter. ⇒ I wrote a letter and a few days later I",
+      answers: [
+        { id: 1654, answer: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis labore, repellendus eum, laboriosam illo, accusamus doloremque sequi cum itaque quidem ullam aperiam ipsa possimus officia consequuntur molestiae consectetur aliquam eos.' },
+        { id: 24, answer: '\'d shown' },
+      ],
+      correct: 'showed',
+    },
+    {
+      id: 43256453,
+      question: "saddsadasdsdsaddsadasd, I wrote a letter. Second, I showed him the letter. ⇒ I wrote a letter and a few days later I",
+      answers: [
+        { id: 545671, answer: 'q' },
+        { id: 892, answer: 'w' },
+        { id: 873, answer: 'e' },
+      ],
+      correct: 'q',
+    },
+    {
+      id: 543,
+      question: "saddsadasdsdsaddsadasd, I wrote a letter. Second, I showed him the letter. ⇒ I wrote a letter and a few days later I",
+      answers: [
+        { id: 7511, answer: 'q' },
+        { id: 22222, answer: 'w' },
+        { id: 36789799999, answer: 'e' },
+        { id: 4764645, answer: 'd' },
       ],
       correct: 'e',
     }
@@ -154,6 +200,9 @@ const taskInput = {
 export const App = () => {
   return (
     <AppContainer>
+      <Section>
+        <Radio task={taskRadio} />
+      </Section>
       <Section>
         <Input task={taskInput} />
       </Section>
