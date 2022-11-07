@@ -9,10 +9,12 @@ const Input = ({ task }) => {
   const [userResult, setUserResult] = useState(0);
   const [showResult, setShowResult] = useState(false);
   const [showItemResult, setShowItemResult] = useState(false);
+  const [showCorrectAnswer, setShowCorrectAnswer] = useState(false);
 
   const onCheckBtnClick = () => {
-    setShowResult(true);
-    setShowItemResult(true);
+    setShowResult(prevState => !prevState);
+    setShowItemResult(prevState => !prevState);
+    setShowCorrectAnswer(false);
   };
 
   return (
@@ -29,6 +31,7 @@ const Input = ({ task }) => {
             setUserResult={setUserResult}
             userResult={userResult}
             maxUserResult={task.questions.length}
+            showCorrectAnswer={ showCorrectAnswer}
           />
         ))}
       </ol>

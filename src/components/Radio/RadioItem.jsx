@@ -38,7 +38,7 @@ const RadioItem = ({
           </label>
         ))}
       </form>
-      {showItemResult && <span className={s.icon}>{correct ? <FcApproval /> : <FcCancel />}</span>}
+      {showItemResult && <div className={s.icon}>{correct ? <FcApproval /> : <FcCancel />}</div>}
     </li>
   )
 };

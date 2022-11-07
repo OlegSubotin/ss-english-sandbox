@@ -6,8 +6,10 @@ import s from './MultipleChoiceGap.module.css'
 
 const MultipleChoiceGap = ({ task }) => {
   const [userVariant, setUserVariant] = useState();
+
   const onVariantClick = e => {
     setUserVariant(e.target.innerHTML.trim())
+    e.target.className = s.clicked;
   }
 
   const onAnswerClick = e => {

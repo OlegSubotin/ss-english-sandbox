@@ -41,20 +41,20 @@ const CorrectOrderItem = ({ pieces, correct }) => {
     <li className={s.mainItem}>
       <ul className={s.visibleButtons}>
         {randomSortedPieces?.map(({ id, text }) => (
-          <li key={id}>
+          <li className={s.visibleButtonsItem}  key={id}>
             <button type='button' className={s.button} onClick={onVisibleBtnClick}>{text}</button>
           </li>
         ))}
       </ul>
-      <ul className={s.visibleButtons}>
+      <ul className={s.unVisibleButtons}>
         {pieces.map(({ id, text }) => (
-          <li key={id}>
+          <li className={s.unVisibleButtonsItem} key={id}>
             <button className={s.smallButton} type='button' id={text} onClick={onHiddenBtnClick}></button>
           </li>
         ))}
       </ul>
       <div className={s.wrapper}>
-        {showAnswer && <p className={s.text}>{correct}</p>}
+        {showAnswer && <p className={s.textCorrect}>{correct}</p>}
         <button type='button' className={s.correctBtn} onClick={onCorrectAnswerClick}>show correct answer</button>
       </div>
     </li>

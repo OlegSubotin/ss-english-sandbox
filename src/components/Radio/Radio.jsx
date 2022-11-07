@@ -11,8 +11,8 @@ const Radio = ({ task }) => {
   const [showItemResult, setShowItemResult] = useState(false);
 
   const onCheckBtnClick = () => {
-    setShowResult(true);
-    setShowItemResult(true);
+    setShowResult(prevState => !prevState);
+    setShowItemResult(prevState => !prevState);
   };
 
   return (

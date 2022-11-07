@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {FcApproval, FcCancel} from 'react-icons/fc';
+import { FcApproval, FcCancel } from 'react-icons/fc';
 import s from './InputItem.module.css';
 
 const InputItem = ({
@@ -12,6 +12,11 @@ const InputItem = ({
   maxUserResult
 }) => {
   const [correct, setCorrect] = useState(false);
+  const [showAnswer, setShowAnswer] = useState(false);
+
+  const onShowCorrectClick = () => {
+    setShowAnswer(prevState => !prevState);
+  }
 
   const onInputChange = (e, correctAnswer) => {
     let usersAnswer = e.target.value;
@@ -34,7 +39,18 @@ const InputItem = ({
       &nbsp;
       <span className={s.text}>{part2}</span>
       &nbsp;
-      {showItemResult && <span className={s.icon}>{correct ? <FcApproval/> : <FcCancel/>}</span>}
+      {showItemResult &&
+        <>
+          <span className={s.icon}>
+            {correct ? <FcApproval /> : <FcCancel />}
+          </span>
+          {showAnswer && <p className={s.correctAnswer}>Correct answer: {correctAnswer}</p>}
+          <button type='button' className={s.correctBtn} onClick={onShowCorrectClick}>
+            show answer
+          </button>
+          
+        </>
+      }
     </li>
   )
 };
